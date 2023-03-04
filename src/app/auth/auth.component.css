@@ -63,6 +63,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: sans-serif;
 }
 
 
@@ -97,13 +98,14 @@
     padding: 10px;
     margin-bottom: 10px;
     border: none;
-    border-radius: 4px;
+    border-radius: 25px;
     box-shadow: 0 2px 5px rgba(0,0,0,.1);
   }
   
   /* Style the form labels */
   label {
-    font-weight: bold;
+    font-weight: medium;
+    
   }
   
   /* Style the toggle button */
@@ -116,12 +118,13 @@
   
   /* Style the submit button */
   button[type="submit"] {
-    background-color: #007bff;
+    background-color: #6C63FF;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 25px;
     padding: 10px 20px;
     cursor: pointer;
+    transform: translate(50%, -50%);
   }
 
   /* Mobile Responsive */
@@ -178,7 +181,7 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease;
   color: black;
-  font-weight:lighter;
+  font-weight:bold;
 }
 
 button:hover {
@@ -189,5 +192,26 @@ button:hover {
 .button {
   padding: 8px;
   margin-right: 20px;
+}
+
+h2{
+  color: white;
+  text-decoration: underline;
+}
+
+.toggle-icon{
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
+
+b{
+  color: white;
+}
+
+.choose-account{
+  color: white;
+  text-decoration: underline;
+  padding-top: 1%;
+  transform: translate(12%, -50%);
 }
 

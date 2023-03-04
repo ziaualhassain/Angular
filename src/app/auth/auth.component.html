@@ -1,3 +1,5 @@
+<!-- RUN THE COMMAND ng add @angular/material to use the material components-->
+
 <div class="header">
   <nav>
     <div class="logo">
@@ -16,35 +18,39 @@
 
 
 <div class="container bg-image">
-<div>
-    <button class="toggle-btn" (click)="toggleForm()">Not this?</button>
-  </div>
+  
+<div class="toggle-icon">
+  <p class="choose-account"> Choose Your Profile!</p>
+  <b>Doctor &nbsp; &nbsp;</b> <mat-slide-toggle (click)="toggleForm()"> <b> &nbsp; &nbsp; User </b></mat-slide-toggle>
+    <!-- <mat-icon  (click)="toggleForm()">{{ showSignupForm ? 'Doctor' : 'Person' }}</mat-icon> -->
+    <!-- <button class="toggle-btn" (click)="toggleForm()">Not this?</button> -->
+</div>
 
-
+<!-- SignupForm for doctors and SignInform for patients cause the doctors need to signup nad need approval 51%-->
 <!--Doctor first time Minting Page-->
   <div *ngIf="showSignupForm">  
-    <h2>Welcome Doc!</h2>
+    <h2>Welcome Doctor!</h2>
     <form>
       <label>
         Name:
-        <input type="text" name="name">
+        <input type="text" placeholder="Enter Your Name" name="name">
       </label>
       <br>
       <label>
         Registartion Number:
-        <input type="text" name="Number">
+        <input type="text" placeholder="Enter Your Reg.No" name="Number">
       </label>
       <br>
       <label>
         Year of Registartion:
-        <input type="text" name="date">
+        <input type="text" placeholder="Enter Registration Year" name="date">
       </label>
       <br>
       <label>
-        SM:
-        <input type="text" name="Number">
+        SMC:
+        <input type="text" placeholder="State Medical Council" name="Number">
       </label>
-      <button type="submit">Mint</button>
+      <button type="submit">Mint!</button>
     </form>
   </div>
   
@@ -54,11 +60,11 @@
     <h2>Welcome User!</h2>
     <form>
       <label>
-        User Name:
-        <input type="text" name="name">
+        UserName:
+        <input type="text" placeholder="Enter a User Name" name="name">
       </label>
       <br>
-      <button type="submit">Mint</button>
+      <button type="submit">Mint!</button>
     </form>
   </div>
   
