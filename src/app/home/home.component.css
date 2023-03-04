@@ -49,8 +49,8 @@
 
 
   /* NAVBAR STYLING */
-
 .header {
+    font-family: sans-serif;
     position: fixed;
     top: 0;
     left: 0;
@@ -63,7 +63,7 @@
   
   nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
   }
   
@@ -108,7 +108,7 @@
   }
   
   button {
-    margin-top: 25px;
+    margin-top: 15px;
     background-color: #D9D9D9;
     color: white;
     font-size: 1.2em;

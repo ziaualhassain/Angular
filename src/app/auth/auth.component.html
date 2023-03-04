@@ -1,0 +1,77 @@
+<div class="header">
+  <nav>
+    <div class="logo">
+      <a href="#"><img src="../../assets/logo2.png" alt="LOGO"></a>
+    </div>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contract</a></li>
+    </ul>
+    <div class="button">
+      <!--<button>Connect</button> //-->
+    <button routerLink='/auth'>Connect</button> 
+    </div>
+  </nav>
+</div> 
+
+
+<div class="container bg-image">
+<div>
+    <button class="toggle-btn" (click)="toggleForm()">Not this?</button>
+  </div>
+
+
+<!--Doctor first time Minting Page-->
+  <div *ngIf="showSignupForm">  
+    <h2>Welcome Doc!</h2>
+    <form>
+      <label>
+        Name:
+        <input type="text" name="name">
+      </label>
+      <br>
+      <label>
+        Registartion Number:
+        <input type="text" name="Number">
+      </label>
+      <br>
+      <label>
+        Year of Registartion:
+        <input type="text" name="date">
+      </label>
+      <br>
+      <label>
+        SM:
+        <input type="text" name="Number">
+      </label>
+      <button type="submit">Mint</button>
+    </form>
+  </div>
+  
+
+  <!--User First time Minting Page-->
+  <div *ngIf="!showSignupForm">
+    <h2>Welcome User!</h2>
+    <form>
+      <label>
+        User Name:
+        <input type="text" name="name">
+      </label>
+      <br>
+      <button type="submit">Mint</button>
+    </form>
+  </div>
+  
+
+
+
+  <!--Home Page-->
+  <div class="container bg-image">
+  
+     <!--Footer-->
+     <div class="footer">
+      <p>Copyright © 2023.All rights reserved.</p>
+    </div>   
+</div>
+
+</div>
