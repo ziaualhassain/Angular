@@ -2,9 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
 
-## Angular Material is used in few areas such as miniting
+## Angular Material
 
-Run `ng add @angular/material` in the project folder to avoid errors
+Run `ng add @angular/material` in the project folder to avoid errors cause we had used angular material for the toggle switch in the minitng page.
 
 ## Development server
 
