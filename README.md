@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Angular Material is used in few areas such as miniting
 
-Run 'ng add @angular/material' in the project folder to avoid errors
+Run `ng add @angular/material` in the project folder to avoid errors
 
 ## Development server
 
