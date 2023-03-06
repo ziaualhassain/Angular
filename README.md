@@ -10,6 +10,18 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+## Installing the hardhat and the required components
+
+Run `npm init --yes` to intilise
+
+Run `npm install --save-dev hardhat` to install hardhat
+
+Run `npm install @nomicfoundation/hardhat-toolbox` to download nomicfoundation hardhat toolbox
+
+Run `npm install @openzeppelin/contracts` to download openzepplin contracts
+
+Run `npx hardhat` to intilise a empty hardhat config file
+
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.

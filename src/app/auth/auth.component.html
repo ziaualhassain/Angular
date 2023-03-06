@@ -21,7 +21,8 @@
   
 <div class="toggle-icon">
   <p class="choose-account"> Choose Your Profile!</p>
-  <b>Doctor &nbsp; &nbsp;</b> <mat-slide-toggle (click)="toggleForm()"> <b> &nbsp; &nbsp; User </b></mat-slide-toggle>
+  <!-- Style the mat-slide-toggle according to the new requirement using wrapper class method check stackoverflow-->
+  <b>Doctor &nbsp; &nbsp;</b> <mat-slide-toggle (click)="toggleForm()"> <b> &nbsp; &nbsp; User </b></mat-slide-toggle> 
     <!-- <mat-icon  (click)="toggleForm()">{{ showSignupForm ? 'Doctor' : 'Person' }}</mat-icon> -->
     <!-- <button class="toggle-btn" (click)="toggleForm()">Not this?</button> -->
 </div>
@@ -60,7 +61,7 @@
     <h2>Welcome User!</h2>
     <form>
       <label>
-        UserName:
+        User Name:
         <input type="text" placeholder="Enter a User Name" name="name">
       </label>
       <br>
