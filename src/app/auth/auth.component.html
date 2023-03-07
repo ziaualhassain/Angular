@@ -21,35 +21,39 @@
   
 <div class="toggle-icon">
   <p class="choose-account"> Choose Your Profile!</p>
+  
   <!-- Style the mat-slide-toggle according to the new requirement using wrapper class method check stackoverflow-->
   <b>Doctor &nbsp; &nbsp;</b> <mat-slide-toggle (click)="toggleForm()"> <b> &nbsp; &nbsp; User </b></mat-slide-toggle> 
-    <!-- <mat-icon  (click)="toggleForm()">{{ showSignupForm ? 'Doctor' : 'Person' }}</mat-icon> -->
     <!-- <button class="toggle-btn" (click)="toggleForm()">Not this?</button> -->
 </div>
 
-<!-- SignupForm for doctors and SignInform for patients cause the doctors need to signup nad need approval 51%-->
+
+
+<!-- These are the form for the first time users that is for both doctors and the patients so that while clicking minting 
+      they will receive the corresponding nfts with thier previliges -->
+
 <!--Doctor first time Minting Page-->
-  <div *ngIf="showSignupForm">  
+  <div *ngIf="showDoctorForm">  
     <h2>Welcome Doctor!</h2>
-    <form>
+    <form (ngSubmit)="onDoctorFormSubmit()"> <!-- Update doctor form Page-->
       <label>
         Name:
-        <input type="text" placeholder="Enter Your Name" name="name">
+        <input type="text" placeholder="Enter Your Name" name="name" [(ngModel)]="doctorName">
       </label>
       <br>
       <label>
         Registartion Number:
-        <input type="text" placeholder="Enter Your Reg.No" name="Number">
+        <input type="text" placeholder="Enter Your Reg.No" name="number" [(ngModel)]="doctorRegNo">
       </label>
       <br>
       <label>
         Year of Registartion:
-        <input type="text" placeholder="Enter Registration Year" name="date">
+        <input type="text" placeholder="Enter Registration Year" name="date" [(ngModel)]="doctorRegYear">
       </label>
       <br>
       <label>
         SMC:
-        <input type="text" placeholder="State Medical Council" name="Number">
+        <input type="text" placeholder="State Medical Council" name="smc" [(ngModel)]="doctorSMC">
       </label>
       <button type="submit">Mint!</button>
     </form>
@@ -57,12 +61,12 @@
   
 
   <!--User First time Minting Page-->
-  <div *ngIf="!showSignupForm">
+  <div *ngIf="!showDoctorForm">
     <h2>Welcome User!</h2>
-    <form>
+    <form (ngSubmit)="onPatientFormSubmit()">
       <label>
         User Name:
-        <input type="text" placeholder="Enter a User Name" name="name">
+        <input type="text" placeholder="Enter a User Name" name="name" [(ngModel)]="patientName">
       </label>
       <br>
       <button type="submit">Mint!</button>
