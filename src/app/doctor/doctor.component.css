@@ -1,0 +1,130 @@
+.container {
+    background-size: cover;
+    display: flex;
+    height: 100%;
+  }
+  
+  .bg-image {
+    background-image: url('../../image.png'); 
+    /* background-image: url('../../assets/tino-rischawy-iuBtS3iDpfg-unsplash.jpg'); */
+  }
+  
+  .left {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  
+  .right {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .container {
+      flex-direction: column;
+    }
+}     
+
+
+
+ /* NAVBAR STYLING */
+ .header {
+    font-family: sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: None;
+    color: white;
+    padding: 10px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 150px;
+    margin-left: 20px;
+  }
+  
+  .logo img {
+    max-width: 100%;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin-top: 5;
+    padding: 50;
+    display: flex;
+  }
+  
+  nav li {
+    margin: 0 10px;
+    padding: 10px;
+  }
+  
+  nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: larger;
+  }
+  
+  nav li a:hover {
+    background-color: none;
+    color: black;
+  }
+  
+  .button {
+    padding: 8px;
+    margin-right: 20px;
+  }
+  
+  button {
+    margin-top: 15px;
+    background-color: #D9D9D9;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: black;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: #090909;
+    color: white
+  }
+  
+
+  /* FOOTER STYLING */
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }

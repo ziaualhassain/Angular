@@ -4,6 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar'; //added for the custom scrollbar
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AuthComponent } from './auth/auth.component';
@@ -21,7 +22,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, AuthComponent, DoctorComponent, PatientComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatIconModule, MatSlideToggleModule, FormsModule, RouterModule.forRoot(routes)],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatIconModule, MatSlideToggleModule, FormsModule, RouterModule.forRoot(routes),PerfectScrollbarModule],
   providers: [],
   bootstrap: [AppComponent]
 })
