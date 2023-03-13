@@ -76,6 +76,9 @@ li{
   background-color: red;
 }
 
+.close-button{
+  cursor: pointer;
+}
 /* STYLING THE SCROLLBAR OF THE PAGE :) */
 ::-webkit-scrollbar {
   width: 10px;
@@ -197,12 +200,59 @@ h2{
   padding: 25px;
 }
 
+
 .update-patient-timeline{
- margin-left: 225px;
- margin-top: 50px;
- background-color: #4CAF50;
+  margin-left: 225px;
+  margin-top: 50px;
+  background-color: #4CAF50;
  color: white;
 }
+
+
+.input-class {
+  margin-top: 25px;
+  margin-left: 150px;
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 10px;
+  color: #555;
+  background-color: #fff;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.input-class:hover {
+  border-color: #aaa;
+}
+
+.input-class:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.input-class::-webkit-file-upload-button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.input-class::-webkit-file-upload-button:hover {
+  background-color: #555;
+}
+
+.input-class::-webkit-file-upload-button:focus {
+  outline: none;
+  background-color: #444;
+}
+
+
 
 /* FOOTER STYLING */
 .footer {

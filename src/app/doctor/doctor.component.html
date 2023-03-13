@@ -62,19 +62,16 @@
       <h2> Need Someone's Data? </h2>
       <div class="request_approval" [perfectScrollbar]> 
         <input type="text" class="address-input" placeholder="Enter the address of the patient!" [(ngModel)]="patientAddress"> <!--Store the address-->
-        
-        
         <div class="button-container">
           <button (click)="readPermission()" class="read-button">Read Request</button>
           <button (click)="writePermission()" class="write-button">Write Request</button>
-          <input type="text" class="upadate-data-input" placeholder="Update the context Eg: medication etc..!"> <!--Store the address-->
+          <input type="text" class="upadate-data-input" placeholder="Update with the details like medication etc..!" [(ngModel)]="patientUpdateInfo"> <!--Store the address-->
         </div>
-        
-        <!--FILE UPLOAD OPTION SO THE DOCTORS CAN UPDATE THE FILES TO THE IPFS-->
-
-
+        <input class="input-class" type="file" id="file" multiple (change)="onFileSelected($event)">
+       <label class="input-label" for="file"> </label>
       </div>
-      <button class="update-patient-timeline">Update Data</button>
+      
+      <button class="update-patient-timeline" (click)="updatePatientData()">Update Data</button>
     </div>
   </div>
   

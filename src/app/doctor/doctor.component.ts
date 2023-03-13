@@ -90,4 +90,23 @@ export class DoctorComponent implements OnInit {
     }
   }
   
+  files: File[] = []; //To store the files uploaded by the doctors
+
+  patientUpdateInfo: string = ''; //To store the details entered by the doctor as a string
+
+
+  onFileSelected(event: any) {   // The onFileSelected() method is called when the user selects one or more files
+    const selectedFiles = <FileList>event.target.files;
+    for (let i = 0; i < selectedFiles.length; i++) 
+    {
+        this.files.push(selectedFiles[i]);
+    }
+ }
+
+  //use the above data patient upadte info (or) files and push them to ipfs
+  updatePatientData(){
+    alert('data has been added to patient timeline');
+    console.log(this.patientUpdateInfo);
+    console.log('Files:', this.files);
+  }
 }
