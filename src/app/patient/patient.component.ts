@@ -35,8 +35,7 @@ export class PatientComponent {
     'Recent Address 2......',
     'Recent Address 3......',
     'Recent Address 4......',
-    
-  
+    'Recent Address 5......', 
   ];
 
   addressToGrantOrRevoke: string = '';

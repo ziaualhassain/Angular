@@ -1,6 +1,7 @@
 <div class="container bg-image">
-    <!--Header-->
-    <div class="header">
+
+  <!--Header-->
+      <div class="header">
         <nav>
           <div class="logo">
             <a href="#"><img src="../../assets/logo2.png" alt="LOGO"></a>
@@ -11,28 +12,76 @@
           </ul>
           <div class="button">
             <!--<button>Connect</button> //-->
-          <button routerLink='/auth'>Connect</button> 
+          <button routerLink='/auth'>Exit</button> 
           </div>
         </nav>
-</div>
-
-<h1> Doctor's Page</h1>
-
-    <div class="left">
-      <!-- Code for the left side of the page goes here -->
-      <h1> Left Side</h1>
+  </div>
+  
+  <div class="doctor-container">
+     <!--THE DATA NEED TO BE APPROVED BY THE DOCTR THAT IS LEFT SIDE-->
+    <div class="approval-timeline-container">
+      <div class="approval-header">Need Action Now!</div>
+      <div class="approval-timeline" [perfectScrollbar]>
+        <div class="timeline-event">
+          <ul class="new-joining-list">
+            <li *ngFor="let doctor of doctors" (click)="selectDoctor(doctor)">
+              {{ doctor.address }}
+              <span *ngIf="doctor.approved" class="approval-status approved"></span>
+              <span *ngIf="!doctor.approved" class="approval-status denied"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="right">
-      <!-- Code for the right side of the page goes here -->
-      <h1> Right Side </h1>
+  
+    
+    <div *ngIf="selectedDoctor" class="doctor-dropdown">
+      
+      <b>New Join?</b>
+      <div>{{ selectedDoctor.name }}</div>
+      <div>{{ selectedDoctor.address }}</div>
+      <div class="dropdown-buttons">
+        <button class="approve-btn" (click)="approveOrDenyDoctor(selectedDoctor, true)">Approve</button>
+        <button class="deny-btn" (click)="approveOrDenyDoctor(selectedDoctor, false)">Deny</button>
+      </div>
+      <div class="close-button" (click)="clearSelectedDoctor()">Close X</div>
     </div>
 
-<!--Footer-->
-<div class="footer">
-    <p>Copyright © 2023.All rights reserved.</p>
-</div>   
-
-
-</div>
   
 
+
+    <!--DOCTOR REQUESTING FOR PATIENT PROFILE THAT IS RIGHT SIDE-->
+    <div class="requesting-profile-container">
+    
+    <span class="icon-text-container">
+      <div class="account_address"> 
+         {{account_address}} <mat-icon class="profile-icon">account_circle</mat-icon>
+      </div>  <!--To display the account address of the doctor-->
+    </span>
+  
+      <h2> Need Someone's Data? </h2>
+      <div class="request_approval" [perfectScrollbar]> 
+        <input type="text" class="address-input" placeholder="Enter the address of the patient!" [(ngModel)]="patientAddress"> <!--Store the address-->
+        
+        
+        <div class="button-container">
+          <button (click)="readPermission()" class="read-button">Read Request</button>
+          <button (click)="writePermission()" class="write-button">Write Request</button>
+          <input type="text" class="upadate-data-input" placeholder="Update the context Eg: medication etc..!"> <!--Store the address-->
+        </div>
+        
+        <!--FILE UPLOAD OPTION SO THE DOCTORS CAN UPDATE THE FILES TO THE IPFS-->
+
+
+      </div>
+      <button class="update-patient-timeline">Update Data</button>
+    </div>
+  </div>
+  
+  
+  <!--Footer-->
+  <div class="footer">
+    <p>Copyright © 2023.All rights reserved.</p>
+  </div>  
+  
+  </div>

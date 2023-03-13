@@ -1,46 +1,223 @@
-.container {
-    background-size: cover;
-    display: flex;
-    height: 100%;
-  }
+.doctor-container {
+  padding-top: 180px;
+  color:white;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex:1;
+  box-sizing: border-box;
+  /* overflow-y: auto; */
+}
+
+.approval-timeline-container {
+  flex-basis: 50%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.approval-header {
+  margin-left: 115px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.approval-timeline {
+  height: calc(100% - 50px);
+  margin-left: 150px;
+}
+
+.new-joining-list{
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 25px;
+  padding: 10px;
+}
+
+li{
+  list-style: none;
+  padding: 10px;
+  font-size: 15px;
+}
+
+/* STYLE THE POPUP */
+.doctor-address:hover .doctor-dropdown {
+  display: block;
+}
   
-  .bg-image {
-    background-image: url('../../image.png'); 
-    /* background-image: url('../../assets/tino-rischawy-iuBtS3iDpfg-unsplash.jpg'); */
-  }
-  
-  .left {
-    flex: 1;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow-y: auto;
-  }
-  
-  .right {
-    flex: 1;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow-y: auto;
-  }
-  
-  @media only screen and (max-width: 767px) {
-    .container {
-      flex-direction: column;
-    }
-}     
+.doctor-dropdown {
+  font-weight: bold;
+  text-align: center;
+  color: #090909;
+  position: fixed;
+  margin-top: 30px;
+  background-color: #D9D9D9;
+  margin-right: 880px;
+  right: 0;
+  z-index: 1;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.doctor-dropdown button.approve-btn:hover {
+  background-color: green;
+}
+
+.approve-btn {
+  color: green;
+}
+
+.deny-btn{
+  color: red;
+}
+
+.doctor-dropdown button.deny-btn:hover {
+  background-color: red;
+}
+
+/* STYLING THE SCROLLBAR OF THE PAGE :) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #D9D9D9;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track-piece:end {
+  margin-bottom: 10px; 
+}
+
+::-webkit-scrollbar-track-piece:start {
+  margin-top: 10px;
+}
 
 
+/* Mobile View Setting*/
+@media only screen and (max-width: 767px) 
+{
+  .doctor-container, .doctor-form
+  {
+    flex-direction: column;
+  }  
 
- /* NAVBAR STYLING */
- .header {
+  .doctor-dropdown {
+    color: #090909;
+    position: fixed;
+    margin-top: 30px;
+    background-color: #D9D9D9;
+    margin-right: auto;
+    right: 0;
+    z-index: 1;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+}
+
+
+/* PROFILE SIDE STYLING */
+.requesting-profile-container {
+  overflow-y: auto;
+  flex-basis: 50%;
+  height: 100%;
+  padding: 10px;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+h2{
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.profile-content{
+  margin-left: relative;
+}
+
+.icon-text-container {
+  display: inline-block;
+}
+
+.profile-icon, .account_address {
+  position: fixed;
+  vertical-align: middle;
+}
+
+.account_address{
+  margin-left: 450px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.address-input{
+  width: 50%;
+  margin-left: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.button-container{
+  position: relative;
+}
+
+.read-button, .write-button {
+  background-color: #D9D9D9;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 80px;
+  margin-bottom: 20px;
+}
+
+.upadate-data-input{
+  width: 50%;
+  margin-left: 100px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 25px;
+}
+
+.update-patient-timeline{
+ margin-left: 225px;
+ margin-top: 50px;
+ background-color: #4CAF50;
+ color: white;
+}
+
+/* FOOTER STYLING */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+
+  /* NAVBAR STYLING */
+  .header {
     font-family: sans-serif;
     position: fixed;
     top: 0;
@@ -116,15 +293,21 @@
     background-color: #090909;
     color: white
   }
+
+  .container {
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  }
+  
+  .bg-image {
+    background-image: url('../../image.png'); 
+    /* background-image: url('../../assets/tino-rischawy-iuBtS3iDpfg-unsplash.jpg'); */
+  }
   
 
-  /* FOOTER STYLING */
-  .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: black;
-    color: white;
-    text-align: center;
-  }
