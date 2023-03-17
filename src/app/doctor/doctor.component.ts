@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 interface Doctor {
   name: string;
@@ -35,7 +36,7 @@ export class DoctorComponent implements OnInit {
     address: ''
   };
 
-  constructor() { }
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
   }
@@ -82,6 +83,7 @@ export class DoctorComponent implements OnInit {
     {
       console.log('requested for read '+this.patientAddress);
       alert('Read permission requested');
+      this.router.navigate(['/patient']);
     } 
     else 
     {
